@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="loginstyle.css">
+    <!---we had linked our css file----->
+</head>
+<body>
+<div class="banner">
+    <div class="full-page">
+        <div class="navbar">
+            <!--<div>
+                <a href='index.html'></a>
+            </div>-->
+   
+        </div>
+        <div class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'> <font color="white">Log In</font></button>
+                    <button type='button'onclick='register()'class='toggle-btn'><font color="white">Register</font></button>
+                </div>
+                <form action="../connectionlogin.php" method="post" id='login' class='input-group-login'>
+                    <input type='text'class='input-field'placeholder='Email Id' name="email" required >
+		    <input type='password'class='input-field'placeholder='Enter Password' name="password" required>
+		    <input type='checkbox'class='check-box'><span>Remember Password</span>
+		    <button type='submit'class='submit-btn'>Log in</button>
+		 </form>
+		 <form action="../connectionregister.php" method="post" id='register' class='input-group-register'>
+		     <input type='text'class='input-field'placeholder='First Name' name="firstname" required>
+		     <input type='text'class='input-field'placeholder='Last Name ' name="secondname" required>
+		     <input type='email'class='input-field'placeholder='Email Id' name="email" required>
+		     <input type='password'class='input-field'placeholder='Enter Password' name="password" required>
+		     <input type='password'class='input-field'placeholder='Confirm Password' name="confirmpassword" required>
+		     <input type='checkbox'class='check-box'><span>I agree to the terms and conditions</span>
+                    <button type='submit' name="register_btn" class='submit-btn'>Register</button>
+	         </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</div>
+</body>
+</html>
